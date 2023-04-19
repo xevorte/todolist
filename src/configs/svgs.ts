@@ -1,0 +1,17 @@
+export { ReactComponent as IC_ALERT_FAILED } from '../assets/svgs/ic_alert_failed.svg';
+export { ReactComponent as IC_ALERT_SUCCESS } from '../assets/svgs/ic_alert_success.svg';
+export { ReactComponent as IC_BACK } from '../assets/svgs/ic_back.svg';
+export { ReactComponent as IC_CHECK } from '../assets/svgs/ic_check.svg';
+export { ReactComponent as IC_CLOSE } from '../assets/svgs/ic_close.svg';
+export { ReactComponent as IC_EDIT } from '../assets/svgs/ic_edit.svg';
+export { ReactComponent as IC_LOADING } from '../assets/svgs/ic_loading.svg';
+export { ReactComponent as IC_PLUS } from '../assets/svgs/ic_plus.svg';
+export { ReactComponent as IC_SELECTED } from '../assets/svgs/ic_selected.svg';
+export { ReactComponent as IC_SORT } from '../assets/svgs/ic_sort.svg';
+export { ReactComponent as IC_SORT_NEWEST } from '../assets/svgs/ic_sort_newest.svg';
+export { ReactComponent as IC_SORT_OLDEST } from '../assets/svgs/ic_sort_oldest.svg';
+export { ReactComponent as IC_SORT_AZ } from '../assets/svgs/ic_sort_az.svg';
+export { ReactComponent as IC_SORT_ZA } from '../assets/svgs/ic_sort_za.svg';
+export { ReactComponent as IC_SORT_UNDONE } from '../assets/svgs/ic_sort_undone.svg';
+export { ReactComponent as IC_TRASH } from '../assets/svgs/ic_trash.svg';
+export { ReactComponent as IC_WARNING } from '../assets/svgs/ic_warning.svg';

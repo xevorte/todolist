@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply bg-light;
+  }
+
+  section {
+    @apply mt-11 mb-14;
+  }
+
+  .container {
+    @apply w-4/5 mx-auto;
+  }
+
+  .header {
+    @apply bg-primary text-white text-2xl font-extrabold;
+  }
+
+  .modal-information {
+    @apply relative flex items-center w-full shadow-md rounded-b-2xl cursor-pointer overflow-hidden transition-all;
+  }
+
+  .btn {
+    @apply flex justify-center items-center text-lg font-semibold rounded-full select-none  px-6 py-3.5 transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-primary enabled:hover:bg-low text-white disabled:bg-sky-300;
+  }
+
+  .btn-danger {
+    @apply bg-danger enabled:hover:bg-[#ba3441] text-white disabled:bg-rose-300;
+  }
+
+  .btn-light {
+    @apply bg-light enabled:hover:bg-gray-300 text-dark disabled:bg-slate-200;
+  }
+
+  .modal {
+    @apply flex flex-col justify-between h-full font-poppins;
+  }
+
+  .modal-header {
+    @apply flex items-center justify-between border-b-2 border-b-superLight px-[30px] pt-[22px] pb-5;
+  }
+
+  .modal-body {
+    @apply p-8;
+  }
+
+  .modal-footer {
+    @apply flex justify-center border-t-2 border-t-superLight px-10 py-6 sm:justify-end;
+  }
+
+  .form-label {
+    @apply block text-xs font-semibold uppercase mb-2;
+  }
+
+  .form-input {
+    @apply w-full text-dark font-light border border-superLight rounded-md outline-none px-[18px] py-3 placeholder:text-[#A4A4A4] focus:border-primary;
+  }
+
+  .dropdown {
+    @apply bg-white rounded-lg shadow-md divide-y overflow-hidden transition-all duration-300;
+  }
+
+  .dropdown-item {
+    @apply flex flex-shrink-0 items-center justify-between px-6 py-4 cursor-pointer transition-all hover:bg-sky-100;
+  }
+
+  .todo-header {
+    @apply container flex flex-wrap items-center justify-between;
+  }
+
+  .todo-title {
+    @apply text-4xl font-bold mt-4;
+  }
+
+  .dashboard-content {
+    @apply container mt-12;
+  }
+
+  .activity-wrapper {
+    @apply grid gap-x-5 gap-y-6 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .activity-item {
+    @apply flex flex-col justify-between min-h-[234px] bg-white ring-1 ring-slate-100 shadow-md rounded-2xl p-7 transition-all;
+  }
+
+  .activity-body {
+    @apply h-full text-lg font-bold transition-all group-hover:text-white;
+  }
+
+  .activity-header {
+    @apply container flex flex-wrap items-center justify-between;
+  }
+
+  .activity-header-input {
+    @apply font-bold text-4xl leading-none border-b outline-none ml-10 mr-5 overflow-x-auto transition-all duration-200 disabled:border-b-transparent;
+  }
+
+  .btn-sort-wrapper {
+    @apply bg-transparent border border-superLight rounded-full p-3.5 mr-5 cursor-pointer;
+  }
+
+  .list-item-wrapper {
+    @apply flex flex-shrink-0 justify-between items-center bg-white shadow-md rounded-xl px-7 py-[30px] overflow-x-auto;
+  }
+
+  .list-item-content {
+    @apply flex flex-shrink-0 items-center;
+  }
+
+  .list-item-checkbox-loading {
+    @apply w-7 h-7 bg-slate-300 rounded-md p-1 mr-6;
+  }
+
+  .list-item-checkbox {
+    @apply border p-1 mr-6 cursor-pointer transition-all;
+  }
+
+  .list-item-indicator {
+    @apply w-2.5 h-2.5 rounded-full mr-5;
+  }
+
+  .list-item-title-loading {
+    @apply bg-slate-300 text-slate-300 text-lg font-medium rounded-md mr-5 cursor-pointer;
+  }
+
+  .list-item-title {
+    @apply text-lg font-medium mr-4 cursor-default select-none transition-all;
+  }
+
+  .list-item-update-loading {
+    @apply w-6 h-6 bg-slate-300 rounded-md;
+  }
+
+  .list-item-delete-loading {
+    @apply w-7 h-7 bg-slate-300 rounded-md;
+  }
+}
+
+.ReactModal__Overlay {
+  margin-bottom: -100vh;
+  transition: margin-bottom ease-in-out 0.4s;
+}
+
+.ReactModal__Overlay--after-open {
+  margin-bottom: 0;
+}
+
+.ReactModal__Overlay--before-close {
+  margin-bottom: -150vh;
+}
