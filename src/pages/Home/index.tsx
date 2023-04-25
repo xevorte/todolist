@@ -41,7 +41,7 @@ export default function Page() {
       },
       onError: () => {
         dispatch(ACTION.setAlertFailed('Activity gagal dihapus'));
-        setTimeout(() => window.location.replace('/404'), 1000);
+        setTimeout(() => window.location.replace('/500'), 500);
       },
     }
   );
@@ -113,8 +113,9 @@ export default function Page() {
           type='primary'
           icon={<SVG.IC_PLUS />}
           label='Tambah'
-          onClick={() => setIsOpenCreateModal(!isOpenCreateModal)}
+          className='mb-4'
           isLoading={CreateActivity.isLoading}
+          onClick={() => setIsOpenCreateModal(!isOpenCreateModal)}
         />
       </div>
       <div className='dashboard-content'>

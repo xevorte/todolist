@@ -26,7 +26,7 @@ export default function Page() {
   } = useQuery('GetActivity', () => getActivityApi(parseInt(id ?? '')), {
     onError: () => {
       dispatch(setAlertFailed('Activity tidak ditemukan'));
-      setTimeout(() => window.location.replace('/404'), 1000);
+      setTimeout(() => window.location.replace('/404'), 500);
     },
     retry: 1,
   });

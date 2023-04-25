@@ -96,10 +96,7 @@ export default function Component(props: PropsTypes) {
   return (
     <div className={clsx('form-group', className)}>
       {(label && (
-        <label
-          htmlFor={`form-label-${name}`}
-          className='form-label'
-        >
+        <label htmlFor={`form-label-${name}`} className='form-label'>
           {label}
         </label>
       )) ||
@@ -118,8 +115,8 @@ export default function Component(props: PropsTypes) {
         </div>
       ) : (
         <input
-          id={`form-input-${name}`}
-          name={name}
+          id={name}
+          name={`form-input-${name}`}
           type={type}
           className='form-input'
           placeholder={placeholder}

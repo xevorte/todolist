@@ -143,7 +143,7 @@ export default function Component(props: PropsTypes) {
           label='Priority'
           name='priority'
           type='select'
-          className='mt-4'
+          className='md:w-2/5 mt-4'
           options={props.options}
           value={
             props.options.filter(

@@ -1,7 +1,7 @@
 import * as CONST from './bootstrapConstants';
 
-export const setSort = (payload: any) => ({
-  type: CONST.SET_SORT,
+export const setAlertFailed = (payload: any) => ({
+  type: CONST.SET_ALERT_FAILED,
   payload,
 });
 
@@ -10,7 +10,12 @@ export const setAlertSuccess = (payload: any) => ({
   payload,
 });
 
-export const setAlertFailed = (payload: any) => ({
-  type: CONST.SET_ALERT_FAILED,
+export const setAuth = (payload: any) => ({
+  type: CONST.SET_AUTH,
+  payload,
+});
+
+export const setSort = (payload: any) => ({
+  type: CONST.SET_SORT,
   payload,
 });

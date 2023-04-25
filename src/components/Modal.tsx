@@ -33,7 +33,6 @@ export default function Component({
       onRequestClose={setIsOpen}
       style={{
         content: {
-          width: '80%',
           height: 'max-content',
           maxHeight: '80%',
           borderRadius: '12px',
@@ -48,7 +47,7 @@ export default function Component({
         {(header && (
           <div className='modal-header'>
             <h2 className='text-lg font-semibold mr-2'>{header}</h2>
-            <SVG.IC_CLOSE onClick={() => setIsOpen()} />
+            <SVG.IC_CLOSE className='cursor-pointer' onClick={() => setIsOpen()} />
           </div>
         )) ||
           null}

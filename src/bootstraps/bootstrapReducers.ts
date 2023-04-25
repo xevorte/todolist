@@ -5,10 +5,6 @@ export default function Reducer(states = initialStates, action: any) {
   const { payload, type } = action;
 
   const actions = {
-    [CONST.SET_SORT]: () => ({
-      ...states,
-      sort: payload,
-    }),
     [CONST.SET_ALERT_SUCCESS]: () => ({
       ...states,
       alertSuccess: payload,
@@ -16,6 +12,33 @@ export default function Reducer(states = initialStates, action: any) {
     [CONST.SET_ALERT_FAILED]: () => ({
       ...states,
       alertFailed: payload,
+    }),
+    [CONST.SET_AUTH]: () => {
+      if (payload?.type === 'locked') {
+        return {
+          ...states,
+          authLocked: payload?.data,
+        };
+      } else if (payload?.type === 'reset') {
+        return {
+          ...states,
+          auth: {
+            email: undefined
+          },
+          authLocked: {
+            email: undefined,
+          },
+        };
+      } else {
+        return {
+          ...states,
+          auth: payload,
+        };
+      }
+    },
+    [CONST.SET_SORT]: () => ({
+      ...states,
+      sort: payload,
     }),
     DEFAULT: () => states,
   };

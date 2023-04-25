@@ -1,8 +1,15 @@
 import * as TYPE from './types';
+import { store } from '../bootstraps';
 import axios, { AxiosRequestConfig } from 'axios';
 
 const BASE_URL = 'https://todo.api.devcode.gethired.id';
-const EMAIL = 'birhamshidiq@gmail.com';
+let EMAIL = '';
+
+store.subscribe(() => {
+  const states = store.getState();
+
+  EMAIL = states.auth.email || states.authLocked.email;
+});
 
 const api = ({ method, url, params, data, timeout }: AxiosRequestConfig) =>
   axios({

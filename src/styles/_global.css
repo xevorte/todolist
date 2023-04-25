@@ -71,12 +71,72 @@
     @apply flex flex-shrink-0 items-center justify-between px-6 py-4 cursor-pointer transition-all hover:bg-sky-100;
   }
 
+  .login {
+    @apply flex flex-col min-h-screen font-poppins md:flex-row;
+  }
+
+  .login-wrapper {
+    @apply flex flex-col items-center justify-center order-2 w-full bg-light p-14 md:order-1 md:w-3/5 md:p-20;
+  }
+
+  .login-content h2 {
+    @apply text-primary text-4xl font-bold;
+  }
+
+  .login-content p {
+    @apply max-w-[500px] text-secondary text-[13px] mt-4 mb-8 sm:text-sm;
+  }
+
+  .login-form {
+    @apply flex flex-wrap items-center justify-between;
+  }
+
+  .login-form label {
+    @apply text-sm font-semibold uppercase mb-3 sm:m-0;
+  }
+
+  .login-separator {
+   @apply block h-[1px] w-full bg-slate-300 my-8;
+  }
+
+  .login-checkbox {
+    @apply flex items-center select-none cursor-pointer mb-5;
+  }
+
+  .login-checkbox span {
+    @apply rounded px-1 py-0.5 mr-3 transition-all;
+  }
+
+  .login-button {
+    @apply w-full bg-primary text-white text-sm rounded-md px-4 py-1.5 mb-5 transition-all disabled:bg-sky-300 hover:bg-low md:w-fit;
+  }
+
+  .login-background {
+    @apply order-1 w-full h-60 bg-sky-200 rounded-b-3xl pb-7 md:pl-7 md:rounded-l-3xl md:pb-0 md:order-2 md:w-2/5 md:h-auto;
+  }
+
+  .login-background-part {
+    @apply w-full h-full rounded-b-3xl md:rounded-l-3xl;
+  }
+
+  .login-background-part.one {
+    @apply bg-sky-300 pb-9 md:pl-9 md:pb-0;
+  }
+
+  .login-background-part.two {
+    @apply bg-sky-400 pb-11 md:pl-11 md:pb-0;
+  }
+
+  .login-background-part.three {
+    @apply bg-primary border-l-[32px] border-l-primary;
+  }
+
   .todo-header {
     @apply container flex flex-wrap items-center justify-between;
   }
 
   .todo-title {
-    @apply text-4xl font-bold mt-4;
+    @apply text-4xl font-bold mb-4;
   }
 
   .dashboard-content {
@@ -144,6 +204,10 @@
   }
 }
 
+.ReactModal__Content {
+  width: 60%;
+}
+
 .ReactModal__Overlay {
   margin-bottom: -100vh;
   transition: margin-bottom ease-in-out 0.4s;
@@ -155,4 +219,10 @@
 
 .ReactModal__Overlay--before-close {
   margin-bottom: -150vh;
+}
+
+@media screen and (max-width: 768px) {
+  .ReactModal__Content {
+    width: 80%;
+  }
 }
