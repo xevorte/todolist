@@ -15,9 +15,6 @@ module.exports = {
         low: '#428BC1',
         veryLow: '#8942C1',
       },
-      fontFamily: {
-        poppins: 'Poppins',
-      },
     },
   },
   plugins: [],

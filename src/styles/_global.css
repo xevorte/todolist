@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+    url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins Medium'), local('Poppins-Medium'),
+    url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+    url('../assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+    url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'),
+    url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +40,7 @@
 @layer components {
   body {
     @apply bg-light;
+    font-family: 'Poppins', sans-serif;
   }
 
   section {
@@ -40,7 +76,7 @@
   }
 
   .modal {
-    @apply flex flex-col justify-between h-full font-poppins;
+    @apply flex flex-col justify-between h-full;
   }
 
   .modal-header {
@@ -72,7 +108,7 @@
   }
 
   .login {
-    @apply flex flex-col min-h-screen font-poppins md:flex-row;
+    @apply flex flex-col min-h-screen md:flex-row;
   }
 
   .login-wrapper {
@@ -96,7 +132,7 @@
   }
 
   .login-separator {
-   @apply block h-[1px] w-full bg-slate-300 my-8;
+    @apply block h-[1px] w-full bg-slate-300 my-8;
   }
 
   .login-checkbox {

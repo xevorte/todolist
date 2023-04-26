@@ -3,7 +3,7 @@ import { EMPTY_PAGE } from '../../configs/images';
 
 export default function Page() {
   return (
-    <div className='flex flex-col items-center justify-center font-poppins min-h-screen'>
+    <div className='flex flex-col items-center justify-center min-h-screen'>
       <img src={EMPTY_PAGE} alt='illustration' width={560} />
       <h1 className='text-[#24285B] text-2xl font-bold mt-10 mb-4 sm:text-3xl'>
         Something's Wrong.

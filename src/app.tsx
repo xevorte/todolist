@@ -2,7 +2,6 @@ import * as PAGE from './pages';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import WebFont from 'webfontloader';
 import Layout from './layout';
 import './styles/_global.css';
 
@@ -11,14 +10,6 @@ export default function App() {
   const navigate = useNavigate();
   const states = useSelector((state: any) => state);
   const isAuth = states.auth !== undefined || states.authLocked !== undefined;
-
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Poppins:400,500,600,700,800'],
-      },
-    });
-  }, []);
 
   useEffect(() => {
     if (isAuth && location.pathname === '/login') {

@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 export default function Layout() {
   return (
-    <main className='font-poppins'>
+    <main>
       <COMPONENT.Header />
       <COMPONENT.AlertMessage />
       <div className='bg-light'>
