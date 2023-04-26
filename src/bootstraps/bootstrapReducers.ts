@@ -22,12 +22,8 @@ export default function Reducer(states = initialStates, action: any) {
       } else if (payload?.type === 'reset') {
         return {
           ...states,
-          auth: {
-            email: undefined
-          },
-          authLocked: {
-            email: undefined,
-          },
+          auth: undefined,
+          authLocked: undefined,
         };
       } else {
         return {

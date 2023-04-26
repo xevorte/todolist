@@ -8,7 +8,9 @@ let EMAIL = '';
 store.subscribe(() => {
   const states = store.getState();
 
-  EMAIL = states.auth.email || states.authLocked.email;
+  if (states.auth || states.authLocked) {
+    EMAIL = JSON.parse(atob(states.auth || states.authLocked))?.email;
+  }
 });
 
 const api = ({ method, url, params, data, timeout }: AxiosRequestConfig) =>

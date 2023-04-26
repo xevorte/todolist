@@ -84,7 +84,7 @@
   }
 
   .login-content p {
-    @apply max-w-[500px] text-secondary text-[13px] mt-4 mb-8 sm:text-sm;
+    @apply max-w-[500px] text-secondary text-[13px] mt-4 mb-8 sm:text-sm transition-all;
   }
 
   .login-form {
@@ -108,7 +108,7 @@
   }
 
   .login-button {
-    @apply w-full bg-primary text-white text-sm rounded-md px-4 py-1.5 mb-5 transition-all disabled:bg-sky-300 hover:bg-low md:w-fit;
+    @apply w-full bg-primary text-white text-sm rounded-md px-4 pt-1.5 pb-[5px] mb-5 transition-all disabled:bg-sky-300 hover:bg-low md:w-fit;
   }
 
   .login-background {

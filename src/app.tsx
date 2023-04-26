@@ -10,8 +10,7 @@ export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const states = useSelector((state: any) => state);
-  const isAuth =
-    states.auth.email !== undefined || states.authLocked.email !== undefined;
+  const isAuth = states.auth !== undefined || states.authLocked !== undefined;
 
   useEffect(() => {
     WebFont.load({
